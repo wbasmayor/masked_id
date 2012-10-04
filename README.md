@@ -25,6 +25,6 @@ gem 'masked_id'
   In your views, simply use sample.masked_id instead of sample.id or sample.to_params.
   This will mask the original id.
 
-  On your controllers, to find the record with the masked id, use Sample.find_by_masked_id(masked_id)
+  On your controllers, to find the record with the masked id, use Sample.find_via_masked_id(masked_id)
 
 

@@ -11,7 +11,7 @@ module MaskedId
     MaskedId::Baffler.baffle_id(self.id, self.object_id)
   end
 
-  def find_by_masked_id(id)
+  def find_via_masked_id(id)
     self.find(MaskedId::Baffler.debaffle_id(id, self.object_id))
   end
   #module ModelExtensions
