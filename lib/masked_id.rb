@@ -2,7 +2,7 @@ require 'masked_id/baffler'
 
 def mask_id!
   include MaskedId
-  #extend MaskedId::ModelExtensions
+  extend MaskedId::ModelExtensions
 end
 
 module MaskedId
@@ -11,15 +11,13 @@ module MaskedId
     MaskedId::Baffler.baffle_id(self.id, self.object_id)
   end
 
-  def find_via_masked_id(id)
-    self.find(MaskedId::Baffler.debaffle_id(id, self.object_id))
+    
+  module ModelExtensions
+
+    def find_via_masked_id(id)
+      self.find(MaskedId::Baffler.debaffle_id(id, self.object_id))
+    end
+
   end
-  #module ModelExtensions
-
-  #  def find(id)
-  #    super(MaskedId::Baffler.debaffle_id(id, self.object_id))
-  #  end
-
-  #end
 
 end
