@@ -2,7 +2,7 @@ require 'masked_id/baffler'
 
 def mask_id!
   include MaskedId
-  extend MaskedId::ModelExtensions
+  #extend MaskedId::ModelExtensions
 end
 
 module MaskedId
