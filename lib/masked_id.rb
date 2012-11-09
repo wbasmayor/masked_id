@@ -1,4 +1,4 @@
-require 'masked_id/baffler'
+require_relative 'masked_id/baffler'
 
 def mask_id
   include MaskedId
