@@ -13,12 +13,12 @@ gem 'masked_id'
 
 
 ## Usage
-  Add 'mask_id!' in the model you want it's id to be masked with.
+  Add 'mask_id' in the model you want it's id to be masked with.
 
   Example.
 
   class Sample
-    mask_id!
+    mask_id
   end
    
 
