@@ -8,14 +8,13 @@ end
 module MaskedId
 
   def masked_id
-    MaskedId::Baffler.baffle_id(self.id, self.object_id)
+    MaskedId::Baffler.baffle_id(self.id, self.class.spin)
   end
-
     
   module ModelExtensions
 
     def find_by_masked_id(id)
-      self.find(MaskedId::Baffler.debaffle_id(id, self.object_id))
+      self.find(MaskedId::Baffler.debaffle_id(id, spin))
     end
 
   end
