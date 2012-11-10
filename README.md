@@ -13,12 +13,17 @@ gem 'masked_id'
 
 
 ## Usage
-  Add 'mask_id!' in the model you want it's id to be masked with.
-
+  Add 'mask_id' in the model you want it's id to be masked with.
+  Add a self.spin method returning a random integer
   Example.
 
   class Sample
-    mask_id!
+    mask_id
+
+    def self.spin
+      476421
+    end
+
   end
    
 
