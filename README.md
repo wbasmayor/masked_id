@@ -15,8 +15,10 @@ gem 'masked_id'
 ## Usage
   Add 'mask_id' in the model you want it's id to be masked with.
   Add a self.spin method returning a random integer
-  Example.
+  
+  Example:
 
+```
   class Sample
     mask_id
 
@@ -25,7 +27,7 @@ gem 'masked_id'
     end
 
   end
-   
+```
 
   In your views, simply use sample.masked_id instead of sample.id or sample.to_params.
   This will mask the original id.
